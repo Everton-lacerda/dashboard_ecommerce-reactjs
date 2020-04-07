@@ -1,3 +1,19 @@
+
+:root {
+  --cor-tema-claro: rgb(31, 31, 207);
+  --cor-tema: rgb(22, 22, 170);
+
+  --cor-primaria: rgb(10, 99, 167);
+  --cor-secundaria: rgb(17, 131, 14);
+  --cor-terciaria: rgb(176, 22, 22);
+  --cor-amarelo: rgb(220, 204, 26);
+
+  --cor-preto: #000;
+  --cor-braco: #fff;
+  --cor-cinza-claro: #eee;
+  --cor-preta-escuro: #222;
+
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,15 +21,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--cor-cinza-claro);
 }
+
+
+
 .full-width {
   width: 100%;
 }
 .full-height {
   height: 100vh;
 }
-
-
 /* FLEX */
 .flex {
   display: flex;
@@ -36,9 +54,9 @@ body {
 }
 
 .flex-start, .flex-end, .flex-center {
-  justify-content: flex-start;
+  align-items: center;
 }
-.flex-end {
+.flex-start {
   justify-content: flex-start;
 }
 .flex-end {
@@ -49,7 +67,70 @@ body {
   justify-content: center;
 }
 
-.menu-item-active {
-  
+/* COMPONENTS */
+.barraTopo {
+  background-color: var(--cor-preto);
+  margin-left:  -20px;
+  z-index: 100;
+  padding: 10px;
+  height: 22px;
+}
+.barraTopo a {
+  color: var(--cor-braco);
+  text-decoration: none;
+  font-weight: 600;
+}
+.menu {
+  background-color: var(--cor-tema);
+  width: 50px;
+  margin-right: 20px;
+  box-shadow: 0 0 5px #333;
+}
+.menu-open {
+  width: 180px;
+}
+.menu a {
+  color: var(--cor-braco);
+  text-decoration: none;
+}
+.item-top {
+  padding: 10px;
+  padding-bottom: 0;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--cor-braco);
+}
+.menu-item {
+  height: 40px;
+}
+.menu-item:hover, .menu-item-active {
+  background-color: var(--cor-tema-claro);
+}
+.menu-item i {
+  font-size: 1.2rem;
 }
 
+.card {
+  margin: 40px 20px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0 0 5px #777777;
+  background-color: var(--cor-braco);
+}
+
+.search input {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.search button {
+  margin-left: -40px;
+  background-color: transparent;
+  font-size: 1.1rem;
+  border: 0;
+  cursor: pointer;
+}

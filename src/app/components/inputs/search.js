@@ -1,14 +1,12 @@
 import React from 'react';
 
-const Search = ({value, placeholder, onchange,onclick}) => {
-    return (
-        <div className="search flex horizontal">
-            <input value={value} placeholder={placeholder} onChange={onchange} />
-            <button>
-                <i class="fa fa-search" onClick={onclick}></i>
-            </button>
-        </div>
-    );
-}
+const Search = ({ valor, placeholder, onChange, onClick }) => (
+    <div className="search flex horizontal">
+        <input value={valor} placeholder={placeholder} onChange={onChange} />
+        <button>
+            <i className="fa fa-search" onClick={onClick} />
+        </button>
+    </div>
+)
 
 export default Search;

@@ -25,7 +25,7 @@ class Orders extends Component {
     
     render() {
 
-        const { search  } = this.state
+        const  {search}  = this.state
 
         const datas = [
             {
@@ -59,10 +59,10 @@ class Orders extends Component {
                     />
                     <br />
                     <Search 
-                        value={search}
+                        valor={search}
                         placeholder={"Pesquise aqui pelo nome do cliente"}
                         onChande={(event) => this.onChangeSearch(event)}
-                        onclick={() => alert('Pesquisar')}
+                        onClick={() => alert('Pesquisar')}
                     />
                     <br />
                     <SimpleTable 
@@ -73,7 +73,7 @@ class Orders extends Component {
                         offset={this.state.offset}
                         limit={20}
                         total={120}
-                        onclick={(numberCurrent) => this.changeNumberCurrent(numberCurrent) }
+                        onClick={(numberCurrent) => this.changeNumberCurrent(numberCurrent) }
                     />
                 </div>
             </div>

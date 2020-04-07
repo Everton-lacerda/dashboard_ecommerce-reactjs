@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const SimplePagination = ({ offset, limit, total, onclick }) => {
+const SimplePagination = ({ offset, limit, total, onClick }) => {
 
     const pageNumbers = Math.ceil(total / limit)
     return (
@@ -14,7 +14,7 @@ const SimplePagination = ({ offset, limit, total, onclick }) => {
                         <div 
                             className={`pagination-item ${numberCurrentPage === offset ? 'pagination-item-active' : "teste"}`}
                             key={index}
-                            onClick={() => onclick(numberCurrentPage)}
+                            onClick={() => onClick(numberCurrentPage)}
                         >
                             { number + 1}
 

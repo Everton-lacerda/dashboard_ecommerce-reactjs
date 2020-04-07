@@ -9,7 +9,7 @@ export default class Menu extends Component {
     render() {
         const { open } = this.state
         return (
-            <div className={`menu ${ open ? "menu-open" : "" }`}>
+            <div className={`menu full-height ${ open ? "menu-open" : "" }`}>
                 <div className={`item-top flex ${ open ? "flex-end" : "flex-center" }`} onClick={() => this.tootleOpen()}>
                     {(<i className={`fas fa-arrow-${ open ? 'left' : 'right'}`}></i>)}
                     {/* {
